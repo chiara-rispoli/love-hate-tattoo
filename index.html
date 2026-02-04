@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love & Hate Tattoo Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+    // Forza il browser a tornare in alto all'aggiornamento
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    };
+</script>
+<body>
+
+    <header>
+        <div class="logo">Love & Hate Tattoo Studio</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#artisti">Artisti</a></li>
+                <li><a href="#galleria">Galleria</a></li>
+                <li><a href="#prenota">Prenota</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+    
+            <p>Tatuaggi e Piercing d'autore a San Nicola la Strada.</p>
+            <br> <br> <br> <br> <br>
+            <a href="#prenota" class="btn-gold">Prenota un appuntamento</a>
+        </div>
+    </section>
+
+    <section class="hero">
+    <div class="hero-content">
+    <h1>L'Eterna Danza dell'Inchiostro</h1>
+    <p class="hero-description">
+        Nel cuore di <strong>San Nicola la Strada</strong>, trasformiamo il corpo in un’opera vivente. 
+        Da oltre <strong>tredici anni</strong>, Love & Hate Tattoo Studio celebra il connubio tra precisione millimetrica 
+        e visione artistica, dove ogni linea è un respiro e ogni punto un battito. 
+        Che sia il metallo di un piercing o il pigmento di un tatuaggio, la nostra maestria 
+        è al servizio della tua storia.
+    </p>
+  </section>
+</div>
+
+    
+
+    <section id="artisti" class="section">
+        <h2 class="section-title">Chi siamo</h2>
+        <div class="artist-grid">
+            <div class="artist-card">
+                <div class="artist-img" style="background-image: url('img/marcello.jpg');"></div>
+                <h3>Marcello Corbelli</h3>
+                <p class="role">Tatuatore</p>
+                <a href="https://instagram.com/loveandhatetattooart" target="_blank" class="btn-insta">@loveandhatetattooart</a>
+            </div>
+            <div class="artist-card">
+                <div class="artist-img" style="background-image: url('img/chiara.jpg');"></div>
+                <h3>Chiara Rispoli</h3>
+                <p class="role">Tatuatrice | Piercer</p>
+                <a href="https://instagram.com/http.bizzlev" target="_blank" class="btn-insta">@http.bizzlev</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="galleria" class="section-dark">
+        <h2 class="section-title">I nostri lavori</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="img/lavoro1.jpg" alt="Lavoro 1"></div>
+            <div class="gallery-item"><img src="img/lavoro2.jpg" alt="Lavoro 2"></div>
+            <div class="gallery-item"><img src="img/lavoro3.jpg" alt="Lavoro 3"></div>
+            <div class="gallery-item"><img src="img/lavoro4.jpg" alt="Lavoro 4"></div>
+            <div class="gallery-item"><img src="img/lavoro5.jpg" alt="Lavoro 5"></div>
+            <div class="gallery-item"><img src="img/lavoro6.jpg" alt="Lavoro 6"></div>
+            <div class="gallery-item"><img src="img/lavoro7.jpg" alt="Lavoro 7"></div>
+            <div class="gallery-item"><img src="img/lavoro8.jpg" alt="Lavoro 8"></div>
+            <div class="gallery-item"><img src="img/lavoro9.jpg" alt="Lavoro 7"></div>
+            <div class="gallery-item"><img src="img/lavoro10.jpg" alt="Lavoro 8"></div>
+        </div>
+    </section>
+
+    <section id="prenota" class="section">
+        <h2 class="section-title">Prenota il tuo Tatuaggio o Piercing</h2>
+        <div class="booking-container">
+
+            
+            <input type="text" name="_gotcha" style="display:none">
+            <form action="https://formspree.io/f/mrelwynn" method="POST">
+    
+    <input type="hidden" name="_next" value="https://loveandhatetattoostudio.netlify.app/grazie.html">         
+
+    
+    <div class="form-row">
+        <input type="text" name="nome" placeholder="Nome e Cognome" required>
+        </div>
+</form>
+
+            <form class="booking-form" action="https://formspree.io/f/mrelwynn" method="POST">
+    <div class="form-row">
+        <input type="text" name="nome" placeholder="Nome e Cognome" required>
+        <input type="email" name="email" placeholder="Email" required>
+    </div>
+
+    <div class="form-group">
+    <input type="tel" name="telefono" placeholder="Numero di Telefono (es. +39 333...)" required>
+    <small style="color: #888; display: block; margin-top: -10px; margin-bottom: 15px;">Ti contatteremo per confermare la data.</small>
+</div>
+    
+    <div class="form-row">
+        <select name="servizio" required>
+            <option value="" disabled selected>Servizio</option>
+            <option value="tatuaggio">Tatuaggio</option>
+            <option value="piercing">Piercing</option>
+        </select>
+        <select name="artista" required>
+            <option value="" disabled selected>Artista</option>
+            <option value="marcello">Marcello Corbelli</option>
+            <option value="chiara">Chiara Rispoli</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <textarea name="messaggio" placeholder="Descrivi la tua idea..." rows="3"></textarea>
+    </div>
+
+    <div class="form-row">
+        <input type="text" name="zona_corpo" placeholder="Zona del corpo">
+        <input type="text" name="grandezza" placeholder="Grandezza stimata (cm)">
+    </div>
+
+    <div class="form-group">
+        <input type="text" name="allergie" placeholder="Eventuali allergie">
+    </div>
+
+    <button type="submit" class="btn-submit">Invia Messaggio</button>
+</form>
+        </div>
+    </section>
+
+    <footer id="contatti">
+        <div class="footer-content">
+            <h2 class="section-title">Vieni a trovarci</h2>
+            <p><strong>Indirizzo:</strong> Via Appia 157, San Nicola la Strada (CE)</p>
+            <p><strong>Instagram:</strong> @loveandhatetattooart | @http.bizzlev</p>
+            
+            <br> <br>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.862814566428!2d14.337739477234077!3d41.05012901684503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133a55826ac6e05b%3A0xbf163409570c510!2sLove%20%26%20Hate%20Tattoo%20Studio!5e0!3m2!1sit!2sit!4v1770143898100!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <p class="copyright">&copy; 2026 Love & Hate Tattoo Studio. Passion & Art.</p>
+    </footer>
+
+</body>
+</html>
