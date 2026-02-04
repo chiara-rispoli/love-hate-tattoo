@@ -100,14 +100,14 @@ nav a:hover { color: white; }
     /* Se invece l'immagine è in una cartella chiamata 'img', usa: url('img/hero-bg.jpg') */
     
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     background-color: #1a1a1a; /* Colore di emergenza se l'immagine non carica */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    position: relative;
+    padding: 0 20px;
 }
 
 .hero-content {
@@ -194,14 +194,14 @@ select option:disabled {
 input:focus, select:focus, textarea:focus { outline: none; border-color: var(--gold); }
 
 .btn-gold, .btn-submit {
-    background: linear-gradient(135deg, #d4af37, #f2d47e);
-    color: black;
-    padding: 18px 40px;
-    text-transform: uppercase;
+    background-color: #d4af37; /* Oro pieno */
+    color: #000 !important;    /* Testo nero per contrasto */
+    padding: 15px 30px;
+    border-radius: 5px;
     font-weight: bold;
-    border: none;
-    cursor: pointer;
     text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
 }
 
 .booking-container {
@@ -276,7 +276,7 @@ footer { padding: 80px 20px; text-align: center; border-top: 1px solid var(--bor
     justify-content: center;
     text-align: center;
     padding: 100px 20px; /* Spazio per non finire sotto l'header */
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('tuo-sfondo.jpg');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('img/hero-bg.jpg');
     background-size: cover;
     background-position: center;
 }
