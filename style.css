@@ -1,177 +1,64 @@
-/* --- 1. Reset e Base --- */
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-    scroll-behavior: smooth; 
+/* --- RESET --- */
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+body { background: #000; color: #fff; font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
+
+/* --- HEADER & LOGO --- */
+header { position: sticky; top: 0; z-index: 1000; background: rgba(0,0,0,0.9); border-bottom: 1px solid #d4af37; padding: 10px 0; }
+nav { display: flex; flex-direction: column; align-items: center; }
+.logo { font-family: 'Great Vibes', cursive; color: #d4af37; font-size: 3rem; text-align: center; margin-bottom: 10px; }
+nav ul { display: flex; gap: 15px; list-style: none; }
+nav a { color: #d4af37; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+
+/* --- HERO --- */
+.hero { 
+    min-height: 100vh; 
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/hero-bg.jpg');
+    background-size: cover; background-position: center; background-attachment: fixed;
+    padding: 20px;
 }
+.hero h1 { font-family: 'Great Vibes', cursive; font-size: 4.5rem; color: #d4af37; margin-bottom: 15px; }
+.hero-subtitle { font-size: 1.5rem; margin-bottom: 20px; }
+.hero-description { max-width: 700px; color: #ccc; margin-bottom: 30px; line-height: 1.6; }
 
-html, body {
-    width: 100%;
-    background-color: #000;
-    color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
+/* --- SEZIONI --- */
+.section { padding: 80px 20px; text-align: center; }
+.section-dark { padding: 80px 20px; background: #080808; text-align: center; }
+.section-title { font-family: 'Great Vibes', cursive; font-size: 3.5rem; color: #d4af37; margin-bottom: 40px; }
+
+/* --- ARTISTI (Freni alle immagini) --- */
+.artist-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+.artist-card { background: #111; padding: 20px; width: 320px; border: 1px solid #222; }
+.artist-img { width: 100%; height: 350px; background-size: cover; background-position: center; margin-bottom: 15px; }
+
+/* --- GALLERIA (Freni alle immagini) --- */
+.gallery-grid { 
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 15px; max-width: 1200px; margin: 0 auto; 
 }
+.gallery-item { aspect-ratio: 1/1; overflow: hidden; border: 1px solid #222; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
+.gallery-item:hover img { transform: scale(1.05); }
 
-:root {
-    --gold: #d4af37;
-    --gold-bright: #f2d47e;
+/* --- FORM --- */
+.booking-container { max-width: 700px; margin: 0 auto; background: #111; padding: 30px; border: 1px solid #d4af37; }
+.form-row { display: flex; gap: 15px; margin-bottom: 15px; }
+input, select, textarea { width: 100%; padding: 12px; background: #1a1a1a; border: 1px solid #333; color: #fff; margin-bottom: 10px; }
+.btn-gold, .btn-submit { background: #d4af37; color: #000; padding: 15px 30px; border: none; font-weight: bold; cursor: pointer; text-decoration: none; display: inline-block; }
+
+/* --- WHATSAPP --- */
+.whatsapp-float { 
+    position: fixed; bottom: 30px; right: 30px; background: #25d366; 
+    width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+    z-index: 2000; box-shadow: 0 4px 10px rgba(0,0,0,0.5); 
 }
+.whatsapp-float img { width: 35px; height: 35px; }
 
-/* --- 2. Header & Navigazione --- */
-header {
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--gold);
-}
-
-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 0;
-    gap: 10px;
-}
-
-header nav .logo {
-    font-family: 'Great Vibes', cursive !important;
-    color: var(--gold) !important;
-    font-size: 3.5rem !important;
-    text-transform: none !important;
-    text-align: center !important;
-    width: 100%;
-    display: block;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-nav ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--gold);
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    transition: 0.3s;
-}
-
-nav a:hover { color: white; }
-
-/* --- 3. Sezione Hero --- */
-.hero {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), 
-                url('img/hero-bg.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
-
-.hero-content {
-    max-width: 800px;
-    animation: fadeIn 2s ease-in-out;
-}
-
-.hero h1 {
-    font-family: 'Great Vibes', cursive;
-    color: var(--gold);
-    font-size: 4.5rem;
-    margin-bottom: 20px;
-}
-
-.hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 25px;
-    font-weight: 300;
-}
-
-.hero-description {
-    color: #b0b0b0;
-    line-height: 1.8;
-    margin-bottom: 40px;
-}
-
-.hero-description strong { color: var(--gold); }
-
-/* --- 4. Bottone Gold --- */
-.btn-gold {
-    display: inline-block;
-    padding: 15px 35px;
-    border: 2px solid var(--gold);
-    color: var(--gold);
-    background: transparent;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    transition: 0.4s;
-    border-radius: 5px;
-}
-
-.btn-gold:hover {
-    background: var(--gold);
-    color: #000 !important;
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
-}
-
-/* --- 5. WhatsApp Float Button --- */
-.whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 40px;
-    background-color: #25d366;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.1);
-    background-color: #128C7E;
-}
-
-.whatsapp-float img {
-    width: 35px;
-    height: 35px;
-}
-
-/* --- 6. Mobile Optimization --- */
+/* --- MOBILE --- */
 @media (max-width: 768px) {
-    header nav .logo { font-size: 2.5rem !important; }
-    .hero h1 { font-size: 2.8rem; }
-    .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        right: 20px;
-    }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    .hero h1 { font-size: 3rem; }
+    .logo { font-size: 2rem; }
+    .form-row { flex-direction: column; gap: 0; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .whatsapp-float { bottom: 15px; right: 15px; width: 50px; height: 50px; }
 }
