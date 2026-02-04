@@ -57,8 +57,19 @@ nav {
     text-align: center;    /* Centra il testo all'interno */
     margin: 0 auto;        /* Centra il blocco stesso */
     font-family: 'great vibes'; 
-    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
+
+.logo, .logo a {
+    color: #d4af37 !important; /* Forza il colore ORO */
+    font-size: 2.2rem !important; /* Dimensione grande per PC */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombra per profondità */
+}
+
 nav ul {
     display: flex;
     justify-content: center;
@@ -312,13 +323,14 @@ footer { padding: 80px 20px; text-align: center; border-top: 1px solid var(--bor
     @media (max-width: 768px) {
 
         nav {
-        flex-direction: column; /* Logo sopra, link sotto */
+        padding: 15px 5px; 
     }
 
-   .logo {
+   .logo , .logo a {
+        font-size: 1.6rem !important;
+        display: block;
+        width: 100%;
         text-align: center;
-        margin-bottom: 5px;
-        font-size: 1.6rem !important; /* Un po' più piccolo per non tagliare */
     }
 
     /* Se il menu ha troppe voci, le mettiamo in riga ma più piccole */
