@@ -94,15 +94,23 @@ nav a:hover { color: white; }
 .hero {
     min-height: 100vh;
     width: 100%;
-    /* Carica l'immagine solo QUI */
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('tuo-sfondo.jpg'); 
-    background-size: cover;      /* Copre tutto lo schermo senza ripetersi */
-    background-position: center; /* Centra l'immagine */
-    background-attachment: fixed; /* Effetto elegante mentre scorri */
+    /* Sostituisci 'nome-della-tua-foto.jpg' con il nome esatto del tuo file */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Questo crea un effetto di scorrimento elegante */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding-top: 80px; /* Spazio per l'header */
+}
+
+.hero-content {
+    max-width: 900px;
+    padding: 20px;
+    z-index: 1; /* Assicura che il testo sia sopra lo sfondo */
 }
 
 .hero h1 { font-family: 'Great Vibes', cursive; font-size: 4.5rem; color: var(--gold-bright); }
