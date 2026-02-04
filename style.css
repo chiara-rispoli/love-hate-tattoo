@@ -44,12 +44,11 @@ header {
 
 nav {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* Spinge logo a sinistra e menu a destra */
-    align-items: center;
-    padding: 0 20px; /* Margine interno di sicurezza per non far toccare i bordi */
+    flex-direction: column; /* Sovrappone gli elementi (Logo sopra, Menu sotto) */
+    align-items: center;    /* Centra tutto orizzontalmente */
+    gap: 10px;              /* Spazio tra logo e menu */
+    padding: 15px 0;
 }
 
 .logo {
@@ -61,12 +60,14 @@ nav {
 }
 
 nav ul {
-    list-style: none;
     display: flex;
     justify-content: center;
-    gap: 25px;
+    list-style: none;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap; /* Se le voci sono troppe, vanno a capo senza tagliare */
 }
-
 nav a {
     text-decoration: none;
     color: var(--gold);
@@ -309,19 +310,25 @@ footer { padding: 80px 20px; text-align: center; border-top: 1px solid var(--bor
     }
 
     @media (max-width: 768px) {
-    .logo {
-        font-size: 1.8rem !important; /* Rimpicciolisce il logo sul telefono */
+
+        nav {
+        flex-direction: column; /* Logo sopra, link sotto */
+    }
+
+   .logo {
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: 1.6rem !important; /* Un po' più piccolo per non tagliare */
     }
 
     /* Se il menu ha troppe voci, le mettiamo in riga ma più piccole */
     nav ul {
-        display: flex;
-        gap: 10px; /* Riduce lo spazio tra le voci del menu */
+        gap: 10px; /* Stringe i link per farli stare in una riga */
     }
 
     nav ul li a {
-        font-size: 0.8rem; /* Testo menu più piccolo */
-        letter-spacing: 1px;
+        font-size: 0.75rem; /* Testo menu più piccolo */
+
     }
 }
 
