@@ -106,11 +106,37 @@ input, select, textarea {
     width: 100%; /* Occupa tutto lo spazio disponibile */
     padding: 12px;
     margin-bottom: 15px;
-    background: rgba(255, 255, 255, 0.05);
+    background-color: #1a1a1a;
     border: 1px solid #333;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
 }
+
+select {
+    color: #ffffff; /* Testo bianco */
+    background-color: #1a1a1a; /* Sfondo scuro per contrasto */
+    cursor: pointer;
+    appearance: none; /* Rimuove lo stile di default del browser */
+    -webkit-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20width%3D"24"%20height%3D"24"%20viewBox%3D"0%200%2024%2024" fill="none" stroke="%23d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline%20points%3D"6%209%2012%2015%2018%209"><%2Fpolyline><%2Fsvg>'); /* Aggiunge una freccina dorata personalizzata */
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 15px;
+}
+
+/* Stile per le opzioni (quando la tendina si apre) */
+select option {
+    background-color: #1a1a1a; /* Sfondo delle opzioni */
+    color: #ffffff; /* Testo delle opzioni */
+    padding: 10px;
+}
+
+/* Rendi la prima opzione (il segnaposto) leggermente più scura */
+select option:disabled {
+    color: #888;
+}
+
 input:focus, select:focus, textarea:focus { outline: none; border-color: var(--gold); }
 
 .btn-gold, .btn-submit {
