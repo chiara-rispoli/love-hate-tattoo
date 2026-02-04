@@ -256,42 +256,57 @@ footer { padding: 80px 20px; text-align: center; border-top: 1px solid var(--bor
 }
 
 .hero {
-    height: 100vh; /* Copre tutto lo schermo */
-    width: 100%;
+    min-height: 100vh; /* Occupa tutta l'altezza dello schermo */
     display: flex;
-    align-items: center;    /* Centra verticalmente */
-    justify-content: center; /* Centra orizzontalmente */
-    text-align: center;      /* Centra il testo su più righe */
-    padding: 80px 20px; /* aggiunge spazio per il testo sui lati */
-    
-    /* Sfondo con immagine e overlay scuro */
-    background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-        url('img/hero-bg.jpg');
-    
-        background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-
-    background-attachment: scroll;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px; /* Spazio per non finire sotto l'header */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('tuo-sfondo.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-content {
-    max-width: 900px; /* Limita la larghezza per non far allungare troppo le righe */
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;  /* Impila gli elementi (titolo, testo, bottone) */
-    align-items: center;      /* Centra gli elementi impilati */
+    max-width: 800px;
+    width: 100%;
+}
+
+.hero h1 {
+    font-family: 'Great Vibes', cursive;
+    color: #d4af37;
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 300;
 }
 
 .hero-description {
-    font-size: 1.25rem;
+    color: #ccc;
     line-height: 1.8;
-    color: var(--text-gray);
-    margin: 25px 0 40px 0; /* Spazio sopra e sotto il paragrafo */
-    text-align: center;     /* Forza il testo del paragrafo al centro */
+    margin-bottom: 40px;
 }
 
+.btn-gold {
+    display: inline-block;
+    padding: 15px 35px;
+    border: 2px solid #d4af37;
+    color: #d4af37;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-gold:hover {
+    background: #d4af37;
+    color: #000;
+}
 
 .hero-description strong {
     color: var(--gold); /* Fa risaltare San Nicola e i 13 anni */
