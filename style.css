@@ -52,13 +52,13 @@ nav {
 }
 
 .logo {
-    font-family: 'Great Vibes', cursive;
-    font-size: 3.8rem;
-    color: var(--gold);
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    display: block;        /* Si assicura che si comporti come un blocco */
+    width: 100%;           /* Prende tutta la larghezza disponibile */
+    text-align: center;    /* Centra il testo all'interno */
+    margin: 0 auto;        /* Centra il blocco stesso */
+    font-family: 'great vibes'; 
+    letter-spacing: 2px;
 }
-
 nav ul {
     display: flex;
     justify-content: center;
