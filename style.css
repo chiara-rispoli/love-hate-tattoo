@@ -94,17 +94,20 @@ nav a:hover { color: white; }
 .hero {
     min-height: 100vh;
     width: 100%;
-    /* Sostituisci 'nome-della-tua-foto.jpg' con il nome esatto del tuo file */
+    /* Il segreto è il percorso: se l'immagine è nella stessa cartella del CSS usa questo: */
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/hero-bg.jpg');
+    
+    /* Se invece l'immagine è in una cartella chiamata 'img', usa: url('img/hero-bg.jpg') */
+    
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Questo crea un effetto di scorrimento elegante */
+    background-color: #1a1a1a; /* Colore di emergenza se l'immagine non carica */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 80px; /* Spazio per l'header */
+    position: relative;
 }
 
 .hero-content {
