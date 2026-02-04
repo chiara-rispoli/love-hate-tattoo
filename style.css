@@ -10,11 +10,9 @@ html, body {
     width: 100%;
     background-color: #000;
     color: #ffffff;
-    font-family: 'Montserrat', sans-serif; /* Font di fallback leggibile */
-    overflow-x: hidden; /* Evita lo scorrimento laterale */
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
-
-/* Rimuovi overflow: hidden dal body se vuoi scorrere la pagina! */
 
 :root {
     --gold: #d4af37;
@@ -40,7 +38,6 @@ nav {
     gap: 10px;
 }
 
-/* Logo con Great Vibes */
 header nav .logo {
     font-family: 'Great Vibes', cursive !important;
     color: var(--gold) !important;
@@ -69,7 +66,7 @@ nav a {
 
 nav a:hover { color: white; }
 
-/* --- 3. SEZIONE HERO (Quella che era nera) --- */
+/* --- 3. Sezione Hero --- */
 .hero {
     min-height: 100vh;
     width: 100%;
@@ -78,13 +75,11 @@ nav a:hover { color: white; }
     justify-content: center;
     text-align: center;
     padding: 100px 20px;
-    
-    /* Controllo Immagine: assicurati che la cartella 'img' esista! */
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), 
                 url('img/hero-bg.jpg'); 
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Effetto parallasse */
+    background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
@@ -134,17 +129,49 @@ nav a:hover { color: white; }
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
 }
 
-/* --- 5. Animazioni --- */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+/* --- 5. WhatsApp Float Button --- */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #128C7E;
+}
+
+.whatsapp-float img {
+    width: 35px;
+    height: 35px;
 }
 
 /* --- 6. Mobile Optimization --- */
 @media (max-width: 768px) {
     header nav .logo { font-size: 2.5rem !important; }
-    .hero h1 { font-size: 3rem; }
-    .hero-subtitle { font-size: 1.2rem; }
-    nav ul { gap: 10px; }
-    nav a { font-size: 0.7rem; }
+    .hero h1 { font-size: 2.8rem; }
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
